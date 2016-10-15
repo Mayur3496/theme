@@ -3951,10 +3951,8 @@ p > video {
 
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -1.473684211em;
+margin-bottom: -1.473684211em;
 	}
 
-	.site-footer,
-	.widecolumn {
-		padding: 0;
-	}
+	
 }

@@ -4,7 +4,7 @@ Theme URI: https://wordpress.org/themes/twentysixteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
 Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
-Version: 5.3
+Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
@@ -68,19 +68,32 @@ body {
 	margin: 0;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
 
 audio,
 canvas,
 progress,
-video, pictures {
-	display: block;
+video {
+	display: inline-block;
 	vertical-align: baseline;
 }
 
 audio:not([controls]) {
 	display: none;
 	height: 0;
-	width: 0;
 }
 
 [hidden],
@@ -164,6 +177,12 @@ button {
 	overflow: visible;
 }
 
+button,
+input,
+select,
+textarea {
+	max-width: 100%;
+}
 
 button,
 html input[type="button"],
@@ -3951,8 +3970,10 @@ p > video {
 
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -1.473684211em;
-margin-bottom: -1.473684211em;
 	}
 
-	
+	.site-footer,
+	.widecolumn {
+		padding: 0;
+	}
 }
